@@ -1,0 +1,154 @@
+:root {
+  --Cyan: hsl(179, 62%, 43%);
+  --Bright-Yellow: hsl(71, 73%, 54%);
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Grayish-Blue: hsl(218, 22%, 67%);
+  --bright-blue: hsl(179deg 47% 52%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+}
+
+main {
+  min-height: 100vh;
+  background-color: var(--Light-Gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .card {
+
+  border-radius: 10px;
+  box-shadow: 0px 0px 25px 0px var(--Grayish-Blue);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  overflow: hidden;
+}
+
+@media (min-width:1200px) {
+  main .card {
+    width: 635px;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+  }
+}
+
+@media (max-width:1199px) {
+  main .card {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+  }
+
+}
+
+main .card .infos {
+  grid-column: 1/span2;
+  padding: 40px;
+  background-color: white;
+}
+
+
+main .card .infos h1 {
+  font-size: 1.5rem;
+  color: var(--Cyan);
+  font-weight: 700;
+}
+
+main .card .infos p:first-of-type {
+  color: var(--Bright-Yellow);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-top: 25px;
+
+}
+
+
+main .card .infos p:last-of-type {
+  color: var(--Grayish-Blue);
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+main .card .subscription {
+  padding: 40px;
+  background-color: var(--Cyan);
+  color: white;
+}
+
+main .card .subscription h2 {
+  font-size: 1.1rem;
+  color: white;
+}
+
+main .card .subscription span {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+main .card .subscription p:first-of-type {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 0.9rem;
+  position: relative;
+  bottom: 7px;
+}
+
+
+main .card .subscription p:last-of-type {
+
+  margin-top: 5px;
+}
+
+main .card .subscription a {
+  display: block;
+  background-color: var(--Bright-Yellow);
+  text-decoration: none;
+  text-align: center;
+  font-weight: 700;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 30px;
+  color: white;
+}
+
+main .card .why {
+  padding: 40px;
+  color: white;
+  background-color: var(--bright-blue);
+}
+
+main .card .why h2 {
+  font-size: 1.1rem;
+}
+
+main .card .why p {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+footer {
+  margin-top: 20px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
